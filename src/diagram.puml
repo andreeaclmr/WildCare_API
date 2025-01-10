@@ -1,0 +1,49 @@
+@startuml
+class User {
+    - id: Long
+    - username: String
+    - password: String
+    - role: String
+    + gettersAndSetters()
+}
+
+class Animal {
+    - id: Long
+    - name: String
+    - gender: String
+    - countryOfOrigin: String
+    - dateOfEntry: LocalDate
+    + gettersAndSetters()
+}
+
+class Felidae {
+    - type: String
+    + isBigCat(): boolean
+}
+
+class Canidae {
+    - type: String
+    + hasPackBehavior(): boolean
+}
+
+class Reptile {
+    - coldBlooded: boolean
+    + preferredTemperature(): String
+}
+
+class Mustelid {
+    - aquatic: boolean
+    + isAquatic(): boolean
+}
+
+class Leporidae {
+    - speed: Double
+    + maxSpeed(): Double
+}
+
+Animal <|-- Felidae
+Animal <|-- Canidae
+Animal <|-- Reptile
+Animal <|-- Mustelid
+Animal <|-- Leporidae
+@enduml

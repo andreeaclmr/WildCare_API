@@ -136,6 +136,38 @@ The project was built with Spring Boot Initializr version 3.3.6, JAR Packaging, 
 
 # E/R Diagram
 
+```mermaid
+erDiagram
+    USER ||--|| ADMIN : manages
+    USER {
+        int id
+        String username
+        String email
+        String password
+        String role
+        String profileImage
+    }
+
+    ANIMAL ||--o| FAMILY : belongs_to
+    ANIMAL {
+        int id
+        String name
+        String type
+        String gender
+        String countryOfOrigin
+        LocalDate dateOfEntry
+        String imageUrl
+    }
+
+    FAMILY {
+        int id
+        String familyName
+        String description
+    }
+
+    FAMILY ||--o{ ANIMAL : includes
+```
+
 # Profiles
 
 Added application-dev.properties, application-test.properties, and application-prod.properties for environment-specific configurations.
