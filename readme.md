@@ -132,41 +132,11 @@ The project was built with Spring Boot Initializr version 3.3.6, JAR Packaging, 
 - [x] Secure the API with JWT or Basic Auth (to be implemented).
 
 # UML Diagram
-
+![UMLDiagram](images/UML Diagram.png)
 
 # E/R Diagram
+![ERDiagram](images/ER Diagram.png)
 
-```mermaid
-erDiagram
-    USER ||--|| ADMIN : manages
-    USER {
-        int id
-        String username
-        String email
-        String password
-        String role
-        String profileImage
-    }
-
-    ANIMAL ||--o| FAMILY : belongs_to
-    ANIMAL {
-        int id
-        String name
-        String type
-        String gender
-        String countryOfOrigin
-        LocalDate dateOfEntry
-        String imageUrl
-    }
-
-    FAMILY {
-        int id
-        String familyName
-        String description
-    }
-
-    FAMILY ||--o{ ANIMAL : includes
-```
 
 # Profiles
 

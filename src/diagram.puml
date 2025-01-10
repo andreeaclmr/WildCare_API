@@ -1,49 +1,37 @@
 @startuml
 class User {
-    - id: Long
-    - username: String
-    - password: String
-    - role: String
-    + gettersAndSetters()
+    + int id
+    + String username
+    + String email
+    + String password
+    + String role
 }
 
-class Animal {
-    - id: Long
-    - name: String
-    - gender: String
-    - countryOfOrigin: String
-    - dateOfEntry: LocalDate
-    + gettersAndSetters()
+class Family {
+    + int id
+    + String familyName
+    + String description
 }
 
-class Felidae {
-    - type: String
-    + isBigCat(): boolean
+class Type {
+    + int id
+    + String typeName
+    + String description
+    + Family family
 }
 
-class Canidae {
-    - type: String
-    + hasPackBehavior(): boolean
+class Specimen {
+    + int id
+    + String name
+    + Type type
+    + Family family
+    + String gender
+    + String countryOfOrigin
+    + LocalDate dateOfEntry
+    + String imageUrl
 }
 
-class Reptile {
-    - coldBlooded: boolean
-    + preferredTemperature(): String
-}
-
-class Mustelid {
-    - aquatic: boolean
-    + isAquatic(): boolean
-}
-
-class Leporidae {
-    - speed: Double
-    + maxSpeed(): Double
-}
-
-Animal <|-- Felidae
-Animal <|-- Canidae
-Animal <|-- Reptile
-Animal <|-- Mustelid
-Animal <|-- Leporidae
+User "1" -- "0..*" Specimen
+Family "1" -- "0..*" Type
+Type "1" -- "0..*" Specimen
 @enduml
