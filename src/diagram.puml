@@ -10,13 +10,11 @@ class User {
 class Family {
     + int id
     + String familyName
-    + String description
 }
 
 class Type {
     + int id
     + String typeName
-    + String description
     + Family family
 }
 

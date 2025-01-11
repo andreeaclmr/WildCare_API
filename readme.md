@@ -132,7 +132,7 @@ The project was built with Spring Boot Initializr version 3.3.6, JAR Packaging, 
 - [x] Secure the API with JWT or Basic Auth (to be implemented).
 
 # UML Diagram
-![UMLDiagram](images/UML Diagram.png)
+![UMLDiagram](images/UML.png)
 
 # E/R Diagram
 ![ERDiagram](images/ER Diagram.png)
