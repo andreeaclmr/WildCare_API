@@ -1,9 +1,7 @@
 package com.example.WildCare_API.family;
 
 import jakarta.persistence.*;
-import lombok.Data;
 
-@Data
 @Entity
 @Table(name = "family")
 public class Family {
@@ -15,15 +13,6 @@ public class Family {
 
     @Column(nullable = false)
     private String familyName;
-
-    @Column(nullable = false)
-    private String description;
-
-    public Family(String description, String familyName, long id) {
-        this.description = description;
-        this.familyName = familyName;
-        this.id = id;
-    }
 
     public long getId() {
         return id;
@@ -41,24 +30,10 @@ public class Family {
         this.familyName = familyName;
     }
 
-    public String getDescription() {
-        return description;
-    }
+    public Family(long id, String familyName) {
+        this.id = id;
+        this.familyName = familyName;
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
 
-    public Family () {}
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
