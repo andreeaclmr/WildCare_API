@@ -2,9 +2,11 @@ package com.example.WildCare_API.user;
 
 import jakarta.persistence.*;
 import lombok.Builder;
+import lombok.Data;
 
+@Data
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,7 +22,6 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private String role;
 
