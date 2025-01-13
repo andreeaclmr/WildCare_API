@@ -1,9 +1,9 @@
-/* package com.example.WildCare_API.family;
+/* package com.example.WildCare_API.category;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface familyRepository extends JpaRepository <Family, Long> {
+public interface CategoryRepository extends JpaRepository <Category, Long> {
 }
 */
