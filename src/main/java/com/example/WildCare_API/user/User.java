@@ -1,5 +1,7 @@
 package com.example.WildCare_API.user;
 
+
+
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Data;
